@@ -7,8 +7,9 @@ class Race {
         this.power = 0;
         this.toughness = 10;
         this.morale = 0;
-        this.cost = 0;
         this.size = 0;
+        this.cost = 0;
+        this.costModifier = 1;
         this.traits = [];
     }
 
