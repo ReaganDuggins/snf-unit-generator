@@ -1,6 +1,6 @@
 let Traits = require('./Traits');
 
-class Unit {
+class Race {
     constructor() {
         this.attack = 0;
         this.defense = 0;
@@ -180,4 +180,4 @@ class Unit {
     }
 }
 
-module.exports = Unit;
+module.exports = Race;
