@@ -81,6 +81,46 @@ let traits = {
         effect: "Green and Regular units must succeed a DC 13 Morale check to attack this unit for the first time each combat.",
         cost: 50
     },
+    charge: {
+        name: "Charge",
+        effect: "If not Engaged, gain advantage on your Attack check. If it hits and the Power check succeeds, inflict 1 extra casualty and become Engaged. (DC 13 Morale check to Disengage).",
+        cost: 0
+    },
+    diminished: {
+        name: "Diminished",
+        effect: "When you suffer casualties, make a DC 15 Morale check. On failure, suffer 1 additional casualty.",
+        cost: 0
+    },
+    infantry: {
+        name: "Infantry Formation",
+        effect: "Cannot be attacked while allied Levies are on the field.",
+        cost: 0
+    },
+    archer: {
+        name: "Archer Formation",
+        effect: "Cannot be attacked while allied Infantry or Levies are on the field. Can attack any non-siege or non-fortification unit.",
+        cost: 0
+    },
+    cavalry: {
+        name: "Cavalry Formation",
+        effect: "Cannot be attacked by Infantry or Levies. Archers have Disadvantage on Attack rolls against you. Gain Charge.",
+        cost: 0
+    },
+    flying: {
+        name: "Flying Formation",
+        effect: "Can only be attacked by Archers and Flying units. Can attack any unit except Fortifications. Including Siege Engines.",
+        cost: 0
+    },
+    siegeEngine: {
+        name: "Siege Engine Formation",
+        effect: "Can attack any ground unit (except cavalry), including Fortifications. Cannot be attacked while allied Levies, Infantry, Archers, or Cavalry are on the field.",
+        cost: 0
+    },
+    fortification: {
+        name: "Fortification",
+        effect: "Can only be attacked by Siege Engines. Defending units gain a morale bonus equal to the fortification/stronghold level of this unit.",
+        cost: 0
+    }
 };
 
 module.exports = traits;
