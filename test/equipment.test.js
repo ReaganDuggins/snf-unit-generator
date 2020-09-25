@@ -1,5 +1,5 @@
 let chai = require('chai');
-const Equipment = require('../equipment/Equipment');
+const Equipment = require('../attributes/Equipment');
 chai.should();
 
 describe('Equipment', () => {

@@ -1,11 +1,17 @@
 let chai = require('chai');
 chai.should();
 
+let Experience = require('../attributes/Experience');
+
 describe('Experience', () => {
     let unit;
 
-    xit('should apply Green equipment bonuses', () => {
-        unit = new Green();
+    beforeEach(() => {
+        unit = new Experience();
+    })
+
+    it('should apply Green experience bonuses', () => {
+        unit.green();
         unit.attack.should.equal(0);
         unit.power.should.equal(0);
         unit.defense.should.equal(0);
@@ -13,33 +19,38 @@ describe('Experience', () => {
         unit.morale.should.equal(0);
     });
 
-    xit('should apply Regular equipment bonuses', () => {
-        unit = new Medium();
-        unit.power.should.equal(2);
-        unit.defense.should.equal(2);
+    it('should apply Regular experience bonuses', () => {
+        unit.regular();
+        unit.attack.should.equal(1);
+        unit.toughness.should.equal(1);
+        unit.morale.should.equal(1);
     });
 
-    xit('should apply Seasoned equipment bonuses', () => {
-        unit = new Heavy();
-        unit.power.should.equal(4);
-        unit.defense.should.equal(4);
+    it('should apply Seasoned experience bonuses', () => {
+        unit.seasoned();
+        unit.attack.should.equal(1);
+        unit.toughness.should.equal(1);
+        unit.morale.should.equal(2);
     });
 
-    xit('should apply Veteran equipment bonuses', () => {
-        unit = new SuperHeavy();
-        unit.power.should.equal(6);
-        unit.defense.should.equal(6);
+    it('should apply Veteran experience bonuses', () => {
+        unit.veteran();
+        unit.attack.should.equal(1);
+        unit.toughness.should.equal(1);
+        unit.morale.should.equal(3);
     });
 
-    xit('should apply Elite equipment bonuses', () => {
-        unit = new SuperHeavy();
-        unit.power.should.equal(6);
-        unit.defense.should.equal(6);
+    it('should apply Elite experience bonuses', () => {
+        unit.elite();
+        unit.attack.should.equal(2);
+        unit.toughness.should.equal(2);
+        unit.morale.should.equal(4);
     });
 
-    xit('should apply SuperElite equipment bonuses', () => {
-        unit = new SuperHeavy();
-        unit.power.should.equal(6);
-        unit.defense.should.equal(6);
+    it('should apply SuperElite experience bonuses', () => {
+        unit.superElite();
+        unit.attack.should.equal(2);
+        unit.toughness.should.equal(2);
+        unit.morale.should.equal(5);
     });
 });
