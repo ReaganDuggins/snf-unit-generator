@@ -13,7 +13,7 @@ describe('Unit Type', () => {
     it('should apply Levy bonuses/penalties', () => {
         unit.levy();
         unit.morale.should.equal(-1);
-        unit.costModifier.should.equal(0.75);
+        unit.unitTypeModifier.should.equal(0.75);
         unit.traits.should.contain(Traits.levy);
     });
 
@@ -21,7 +21,7 @@ describe('Unit Type', () => {
         unit.infantry();
         unit.defense.should.equal(11);
         unit.toughness.should.equal(11);
-        unit.costModifier.should.equal(1.0);
+        unit.unitTypeModifier.should.equal(1.0);
         unit.traits.should.contain(Traits.infantry);
     });
 
@@ -30,14 +30,14 @@ describe('Unit Type', () => {
         unit.attack.should.equal(1);
         unit.power.should.equal(1);
         unit.morale.should.equal(2);
-        unit.costModifier.should.equal(1.5);
+        unit.unitTypeModifier.should.equal(1.5);
         unit.traits.should.contain(Traits.cavalry);
     });
 
     it('should apply Flying bonuses', () => {
         unit.flying();
         unit.morale.should.equal(3);
-        unit.costModifier.should.equal(2.0);
+        unit.unitTypeModifier.should.equal(2.0);
         unit.traits.should.contain(Traits.flying);
     });
 
@@ -45,7 +45,7 @@ describe('Unit Type', () => {
         unit.archer();
         unit.power.should.equal(1);
         unit.morale.should.equal(1);
-        unit.costModifier.should.equal(1.75);
+        unit.unitTypeModifier.should.equal(1.75);
         unit.traits.should.contain(Traits.archer);
     });
 
@@ -54,7 +54,7 @@ describe('Unit Type', () => {
         unit.attack.should.equal(1);
         unit.power.should.equal(1);
         unit.toughness.should.equal(11);
-        unit.costModifier.should.equal(1.5);
+        unit.unitTypeModifier.should.equal(1.5);
         unit.traits.should.contain(Traits.siegeEngine);
     });
 });

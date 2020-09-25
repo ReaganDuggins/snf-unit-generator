@@ -8,7 +8,7 @@ class Unit extends Equipment {
 
     levy = () => {
         this.morale += -1;
-        this.costModifier = 0.75;
+        this.unitTypeModifier = 0.75;
         this.addTrait(Traits.levy);
         return this;
     }
@@ -16,7 +16,7 @@ class Unit extends Equipment {
     infantry = () => {
         this.defense += 1;
         this.toughness += 1;
-        this.costModifier = 1;
+        this.unitTypeModifier = 1;
         this.addTrait(Traits.infantry);
         return this;
     }
@@ -25,14 +25,14 @@ class Unit extends Equipment {
         this.attack += 1;
         this.power += 1;
         this.morale += 2;
-        this.costModifier = 1.5;
+        this.unitTypeModifier = 1.5;
         this.addTrait(Traits.cavalry);
         return this;
     }
 
     flying = () => {
         this.morale += 3;
-        this.costModifier = 2;
+        this.unitTypeModifier = 2;
         this.addTrait(Traits.flying);
         return this;
     }
@@ -40,7 +40,7 @@ class Unit extends Equipment {
     archer = () => {
         this.power += 1;
         this.morale += 1;
-        this.costModifier = 1.75;
+        this.unitTypeModifier = 1.75;
         this.addTrait(Traits.archer);
         return this;
     }
@@ -49,13 +49,17 @@ class Unit extends Equipment {
         this.attack += 1;
         this.power += 1;
         this.toughness += 1;
-        this.costModifier = 1.5;
+        this.unitTypeModifier = 1.5;
         this.addTrait(Traits.siegeEngine);
         return this;
     }
 
     countCost = () => {
         let bonuses = this.attack + this.power + this.defense - 10 + this.toughness - 10 + (this.morale * 2);
+        let withMultiplier = bonuses * this.unitTypeModifier * 10;
+        // size too
+        // add trait costs
+        // add 30
     }
 }
 
