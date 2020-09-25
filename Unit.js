@@ -1,3 +1,5 @@
+let Traits = require('./Traits');
+
 class Unit {
     constructor() {
         this.attack = 0;
@@ -6,7 +8,8 @@ class Unit {
         this.toughness = 0;
         this.morale = 0;
         this.cost = 0;
-        this.traits = {};
+        this.size = 0;
+        this.traits = [];
     }
 
     
@@ -52,6 +55,7 @@ class Unit {
 
     bugbear = () => {
         this.humanStats();
+        this.traits.push(Traits.martial);
         return this;
     }
     
