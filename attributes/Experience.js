@@ -1,4 +1,4 @@
-const Race = require("../Race");
+const Race = require("./Race");
 
 class Experience extends Race {
     constructor() {

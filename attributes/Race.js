@@ -1,4 +1,4 @@
-let Traits = require('./Traits');
+let Traits = require('../Traits');
 
 class Race {
     constructor() {
