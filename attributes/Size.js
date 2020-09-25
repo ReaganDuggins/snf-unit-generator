@@ -1,35 +1,44 @@
 const Race = require("./Race");
 
-class Size extends Race {
+class Size {
     constructor() {
-        super();
+        this.attack = 0;
+        this.defense = 10;
+        this.power = 0;
+        this.toughness = 10;
+        this.morale = 0;
+        this.size = 0;
+        this.sizeCostModifier = 1;
+        this.cost = 0;
+        this.unitTypeModifier = 1;
+        this.traits = [];
     }
 
-    squad = () => {
+    squadOf = () => {
         this.size = 4;
         this.sizeCostModifier = 0.66;
         return this;
     }
 
-    regiment = () => {
+    regimentOf = () => {
         this.size = 4;
         this.sizeCostModifier = 1.0;
         return this;
     }
 
-    battalion = () => {
+    battalionOf = () => {
         this.size = 4;
         this.sizeCostModifier = 1.33;
         return this;
     }
 
-    legion = () => {
+    legionOf = () => {
         this.size = 4;
         this.sizeCostModifier = 1.66;
         return this;
     }
 
-    hoard = () => {
+    hoardOf = () => {
         this.size = 4;
         this.sizeCostModifier = 2.0;
         return this;

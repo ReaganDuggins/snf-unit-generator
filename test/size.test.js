@@ -11,27 +11,27 @@ describe('Unit Size', () => {
     });
 
     it('should apply Squad cost modifier', () => {
-        unit.squad();
+        unit.squadOf() ;
         unit.sizeCostModifier.should.equal(0.66);
     });
 
     it('should apply Regiment cost modifier', () => {
-        unit.regiment();
+        unit.regimentOf()  ;
         unit.sizeCostModifier.should.equal(1.0);
     });
 
     it('should apply Battalion cost modifier', () => {
-        unit.battalion();
+        unit.battalionOf() ;
         unit.sizeCostModifier.should.equal(1.33);
     });
 
     it('should apply Legion cost modifier', () => {
-        unit.legion();
+        unit.legionOf();
         unit.sizeCostModifier.should.equal(1.66);
     });
 
     it('should apply Hoard cost modifier', () => {
-        unit.hoard();
+        unit.hoardOf();
         unit.sizeCostModifier.should.equal(2.0);
     });
 });

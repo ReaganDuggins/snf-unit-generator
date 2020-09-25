@@ -1,17 +1,9 @@
 let Traits = require('../Traits');
+const Size = require('./Size');
 
-class Race {
+class Race extends Size {
     constructor() {
-        this.attack = 0;
-        this.defense = 10;
-        this.power = 0;
-        this.toughness = 10;
-        this.morale = 0;
-        this.size = 0;
-        this.sizeCostModifier = 1;
-        this.cost = 0;
-        this.unitTypeModifier = 1;
-        this.traits = [];
+        super();
     }
 
     addTrait = function() {
