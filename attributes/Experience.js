@@ -1,6 +1,6 @@
-const Unit = require("../Race");
+const Race = require("../Race");
 
-class Experience extends Unit {
+class Experience extends Race {
     constructor() {
         super();
     }
