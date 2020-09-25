@@ -12,7 +12,9 @@ class Unit {
         this.traits = [];
     }
 
-    
+    addTrait = function() {
+        this.traits.push(...arguments);
+    }
 
     dragonborn = () => {
         this.attack += 2;
@@ -20,6 +22,7 @@ class Unit {
         this.defense += 1;
         this.toughness += 1;
         this.morale += 1;
+        this.addTrait(Traits.courageous);
         return this;
     }
 
@@ -29,33 +32,38 @@ class Unit {
         this.defense += 1;
         this.toughness += 1;
         this.morale += 2;
+        this.addTrait(Traits.stalwart);
         return this;
     }
 
     human = () => {
         this.attack += 2;
         this.morale += 1;
+        this.addTrait(Traits.courageous);
         return this;
     }
 
     elf = () => {
         this.humanStats();
+        this.addTrait(Traits.eternal);
         return this;
     }
 
     gnoll = () => {
         this.humanStats();
+        this.addTrait(Traits.frenzy);
         return this;
     }
     
     hobgoblin = () => {
         this.humanStats();
+        this.addTrait(Traits.martial, Traits.bredForWar);
         return this;
     }
 
     bugbear = () => {
         this.humanStats();
-        this.traits.push(Traits.martial);
+        this.addTrait(Traits.martial);
         return this;
     }
     
@@ -80,6 +88,7 @@ class Unit {
         this.attack += 1;
         this.power += 1;
         this.morale += 1;
+        this.addTrait(Traits.eternal);
         return this;
     }
 
@@ -87,6 +96,7 @@ class Unit {
         this.attack += -1;
         this.defense += 2;
         this.toughness += 2;
+        this.addTrait(Traits.undead, Traits.horrify, Traits.ravenous);
         return this;
     }
 
@@ -105,6 +115,7 @@ class Unit {
         this.defense += -1;
         this.toughness += 1;
         this.morale += 1;
+        this.addTrait(Traits.amphibious);
         return this;
     }
         
@@ -114,6 +125,7 @@ class Unit {
         this.defense += 1;
         this.toughness += 1;
         this.morale += 2;
+        this.addTrait(Traits.savage);
         return this;
     }
 
@@ -123,6 +135,7 @@ class Unit {
         this.defense += 1;
         this.toughness += 1;
         this.morale += 1;
+        this.addTrait(Traits.undead, Traits.mindless);
         return this;
     }
 
@@ -131,22 +144,26 @@ class Unit {
         this.defense += 2;
         this.toughness += 2;
         this.morale += 2;
+        this.addTrait(Traits.undead, Traits.mindless);
         return this;
     }
 
     ent = () => {
         this.giantStats();
+        this.addTrait(Traits.twistingRoots, Traits.rockHurler);
         return this;
     }
 
     troll = () => {
         this.giantStats();
+        this.addTrait(Traits.regenerate);
         return this;
     }
 
     ogre = () => {
         this.giantStats();
         this.morale += 1;
+        this.addTrait(Traits.brutal);
         return this;
     }
 

@@ -32,7 +32,9 @@ describe('Units', () => {
             unit.toughness.should.equal(1);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.courageous
+            ]);
         });
 
         it('should apply Dwarf bonuses', () => {
@@ -43,7 +45,9 @@ describe('Units', () => {
             unit.toughness.should.equal(1);
             unit.morale.should.equal(2);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.stalwart
+            ]);
         });
 
         it('should apply Elf bonuses', () => {
@@ -54,7 +58,9 @@ describe('Units', () => {
             unit.toughness.should.equal(0);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.eternal
+            ]);
         });
 
         it('should apply Elf (winged) bonuses', () => {
@@ -65,7 +71,9 @@ describe('Units', () => {
             unit.toughness.should.equal(0);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.eternal
+            ]);
         });
 
         it('should apply Ghoul bonuses', () => {
@@ -76,7 +84,11 @@ describe('Units', () => {
             unit.toughness.should.equal(2);
             unit.morale.should.equal(0);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.undead,
+                Traits.horrify,
+                Traits.ravenous
+            ]);
         });
 
         it('should apply Gnoll bonuses', () => {
@@ -87,7 +99,9 @@ describe('Units', () => {
             unit.toughness.should.equal(0);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.frenzy
+            ]);
         });
 
         it('should apply Gnome bonuses', () => {
@@ -120,7 +134,10 @@ describe('Units', () => {
             unit.toughness.should.equal(0);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.martial,
+                Traits.bredForWar
+            ]);
         });
 
         it('should apply Human bonuses', () => {
@@ -131,7 +148,9 @@ describe('Units', () => {
             unit.toughness.should.equal(0);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.courageous
+            ]);
         });
 
         it('should apply Kobold bonuses', () => {
@@ -153,7 +172,9 @@ describe('Units', () => {
             unit.toughness.should.equal(1);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.amphibious
+            ]);
         });
 
         it('should apply Ogre bonuses', () => {
@@ -164,7 +185,9 @@ describe('Units', () => {
             unit.toughness.should.equal(2);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.brutal
+            ]);
         });
 
         it('should apply Orc bonuses', () => {
@@ -175,7 +198,9 @@ describe('Units', () => {
             unit.toughness.should.equal(1);
             unit.morale.should.equal(2);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.savage
+            ]);
         });
 
         it('should apply Skeleton bonuses', () => {
@@ -186,7 +211,10 @@ describe('Units', () => {
             unit.toughness.should.equal(1);
             unit.morale.should.equal(1);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.undead,
+                Traits.mindless
+            ]);
         });
 
         it('should apply Ent bonuses', () => {
@@ -197,7 +225,10 @@ describe('Units', () => {
             unit.toughness.should.equal(2);
             unit.morale.should.equal(0);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.twistingRoots,
+                Traits.rockHurler
+            ]);
         });
 
         it('should apply Troll bonuses', () => {
@@ -208,7 +239,9 @@ describe('Units', () => {
             unit.toughness.should.equal(2);
             unit.morale.should.equal(0);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.regenerate
+            ]);
         });
 
         it('should apply Zombie bonuses', () => {
@@ -219,7 +252,10 @@ describe('Units', () => {
             unit.toughness.should.equal(2);
             unit.morale.should.equal(2);
             unit.cost.should.equal(0);
-            unit.traits.should.deep.equal([]);
+            unit.traits.should.deep.equal([
+                Traits.undead,
+                Traits.mindless
+            ]);
         });
     })
     
