@@ -1,33 +1,43 @@
 let chai = require('chai');
-const Unit = require('../Race');
-const Light = require('../equipment/Light');
-const Medium = require('../equipment/Medium');
-const Heavy = require('../equipment/Heavy');
-const SuperHeavy = require('../equipment/SuperHeavy');
 chai.should();
 
 describe('Experience', () => {
     let unit;
 
-    it('should apply light equipment bonuses', () => {
-        unit = new Light();
-        unit.power.should.equal(1);
-        unit.defense.should.equal(1);
+    xit('should apply Green equipment bonuses', () => {
+        unit = new Green();
+        unit.attack.should.equal(0);
+        unit.power.should.equal(0);
+        unit.defense.should.equal(0);
+        unit.toughness.should.equal(0);
+        unit.morale.should.equal(0);
     });
 
-    it('should apply medium equipment bonuses', () => {
+    xit('should apply Regular equipment bonuses', () => {
         unit = new Medium();
         unit.power.should.equal(2);
         unit.defense.should.equal(2);
     });
 
-    it('should apply heavy equipment bonuses', () => {
+    xit('should apply Seasoned equipment bonuses', () => {
         unit = new Heavy();
         unit.power.should.equal(4);
         unit.defense.should.equal(4);
     });
 
-    it('should apply super heavy equipment bonuses', () => {
+    xit('should apply Veteran equipment bonuses', () => {
+        unit = new SuperHeavy();
+        unit.power.should.equal(6);
+        unit.defense.should.equal(6);
+    });
+
+    xit('should apply Elite equipment bonuses', () => {
+        unit = new SuperHeavy();
+        unit.power.should.equal(6);
+        unit.defense.should.equal(6);
+    });
+
+    xit('should apply SuperElite equipment bonuses', () => {
         unit = new SuperHeavy();
         unit.power.should.equal(6);
         unit.defense.should.equal(6);
