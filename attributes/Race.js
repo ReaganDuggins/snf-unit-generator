@@ -3,9 +3,9 @@ let Traits = require('../Traits');
 class Race {
     constructor() {
         this.attack = 0;
-        this.defense = 0;
+        this.defense = 10;
         this.power = 0;
-        this.toughness = 0;
+        this.toughness = 10;
         this.morale = 0;
         this.cost = 0;
         this.size = 0;

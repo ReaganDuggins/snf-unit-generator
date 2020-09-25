@@ -18,8 +18,8 @@ describe('Unit Type', () => {
 
     it('should apply Infantry bonuses', () => {
         unit.infantry();
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(11);
         unit.traits.should.contain(Traits.infantry);
     });
 
@@ -48,7 +48,7 @@ describe('Unit Type', () => {
         unit.siegeEngine();
         unit.attack.should.equal(1);
         unit.power.should.equal(1);
-        unit.toughness.should.equal(1);
+        unit.toughness.should.equal(11);
         unit.traits.should.contain(Traits.siegeEngine);
     });
 });

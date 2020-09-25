@@ -15,8 +15,8 @@ describe('Races', () => {
         unit = unit.bugbear();
         unit.attack.should.equal(2);
         unit.power.should.equal(0);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(0);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(10);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -28,8 +28,8 @@ describe('Races', () => {
         unit = unit.dragonborn();
         unit.attack.should.equal(2);
         unit.power.should.equal(2);
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(11);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -41,8 +41,8 @@ describe('Races', () => {
         unit = unit.dwarf();
         unit.attack.should.equal(3);
         unit.power.should.equal(1);
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(11);
         unit.morale.should.equal(2);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -54,8 +54,8 @@ describe('Races', () => {
         unit = unit.elf();
         unit.attack.should.equal(2);
         unit.power.should.equal(0);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(0);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(10);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -67,8 +67,8 @@ describe('Races', () => {
         unit = unit.elfWinged();
         unit.attack.should.equal(1);
         unit.power.should.equal(1);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(0);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(10);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -80,8 +80,8 @@ describe('Races', () => {
         unit = unit.ghoul();
         unit.attack.should.equal(-1);
         unit.power.should.equal(0);
-        unit.defense.should.equal(2);
-        unit.toughness.should.equal(2);
+        unit.defense.should.equal(12);
+        unit.toughness.should.equal(12);
         unit.morale.should.equal(0);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -95,8 +95,8 @@ describe('Races', () => {
         unit = unit.gnoll();
         unit.attack.should.equal(2);
         unit.power.should.equal(0);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(0);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(10);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -108,8 +108,8 @@ describe('Races', () => {
         unit = unit.gnome();
         unit.attack.should.equal(1);
         unit.power.should.equal(-1);
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(-1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(9);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([]);
@@ -119,8 +119,8 @@ describe('Races', () => {
         unit = unit.goblin();
         unit.attack.should.equal(-1);
         unit.power.should.equal(-1);
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(-1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(9);
         unit.morale.should.equal(0);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([]);
@@ -130,8 +130,8 @@ describe('Races', () => {
         unit = unit.hobgoblin();
         unit.attack.should.equal(2);
         unit.power.should.equal(0);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(0);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(10);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -144,8 +144,8 @@ describe('Races', () => {
         unit = unit.human();
         unit.attack.should.equal(2);
         unit.power.should.equal(0);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(0);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(10);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -157,8 +157,8 @@ describe('Races', () => {
         unit = unit.kobold();
         unit.attack.should.equal(-1);
         unit.power.should.equal(-1);
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(-1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(9);
         unit.morale.should.equal(-1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([]);
@@ -168,8 +168,8 @@ describe('Races', () => {
         unit = unit.lizardfolk();
         unit.attack.should.equal(2);
         unit.power.should.equal(1);
-        unit.defense.should.equal(-1);
-        unit.toughness.should.equal(1);
+        unit.defense.should.equal(9);
+        unit.toughness.should.equal(11);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -181,8 +181,8 @@ describe('Races', () => {
         unit = unit.ogre();
         unit.attack.should.equal(0);
         unit.power.should.equal(2);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(2);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(12);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -194,8 +194,8 @@ describe('Races', () => {
         unit = unit.orc();
         unit.attack.should.equal(2);
         unit.power.should.equal(1);
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(11);
         unit.morale.should.equal(2);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -207,8 +207,8 @@ describe('Races', () => {
         unit = unit.skeleton();
         unit.attack.should.equal(-2);
         unit.power.should.equal(-1);
-        unit.defense.should.equal(1);
-        unit.toughness.should.equal(1);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(11);
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -221,8 +221,8 @@ describe('Races', () => {
         unit = unit.ent();
         unit.attack.should.equal(0);
         unit.power.should.equal(2);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(2);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(12);
         unit.morale.should.equal(0);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -235,8 +235,8 @@ describe('Races', () => {
         unit = unit.troll();
         unit.attack.should.equal(0);
         unit.power.should.equal(2);
-        unit.defense.should.equal(0);
-        unit.toughness.should.equal(2);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(12);
         unit.morale.should.equal(0);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
@@ -248,8 +248,8 @@ describe('Races', () => {
         unit = unit.zombie();
         unit.attack.should.equal(-2);
         unit.power.should.equal(0);
-        unit.defense.should.equal(2);
-        unit.toughness.should.equal(2);
+        unit.defense.should.equal(12);
+        unit.toughness.should.equal(12);
         unit.morale.should.equal(2);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([
