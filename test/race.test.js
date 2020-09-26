@@ -276,4 +276,21 @@ describe('Races', () => {
         ]);
         unit.name.race.should.equal('Zombie');
     });
+
+    it('should apply Ankheg bonuses', () => {
+        console.log(unit);
+        unit = unit.ankheg();
+        console.log(unit);
+        unit.attack.should.equal(+1);
+        unit.power.should.equal(+1);
+        unit.defense.should.equal(10);
+        unit.toughness.should.equal(11);
+        unit.morale.should.equal(0);
+        unit.cost.should.equal(0);
+        unit.traits.should.deep.equal([
+            Traits.burrower,
+            Traits.acidSpit
+        ]);
+        unit.name.race.should.equal('Ankheg');
+    });
 })

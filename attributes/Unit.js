@@ -29,6 +29,7 @@ class Unit extends Equipment {
         this.morale += 2;
         this.unitTypeModifier = 1.5;
         this.addTrait(Traits.cavalry);
+        this.addTrait(Traits.charge);
         this.name.unit = "Cavalry";
         return this;
     }

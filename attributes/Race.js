@@ -10,6 +10,16 @@ class Race extends Size {
         this.traits.push(...arguments);
     }
 
+    ankheg = () => {
+        this.attack += 1;
+        this.power += 1;
+        this.toughness += 1;
+        this.addTrait(Traits.burrower);
+        this.addTrait(Traits.acidSpit);
+        this.name.race = "Ankheg";
+        return this;
+    }
+
     dragonborn = () => {
         this.attack += 2;
         this.power += 2;
@@ -179,8 +189,6 @@ class Race extends Size {
         this.name.race= 'Ogre';
         return this;
     }
-
-
 
     humanStats = () => {
         this.attack += 2;

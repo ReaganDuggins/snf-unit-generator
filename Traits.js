@@ -1,5 +1,10 @@
 // key is name, value is name-value object
 let traits = {
+    acidSpit: {
+        name: "Acid Spit",
+        effect: "When you inflict casualties on an enemy unit, they must succeed a DC 13 Morale check or reduce their Defense by 1.",
+        cost: 150
+    },
     amphibious: {
         name: "Amphibious",
         effect: "Suffer no terrain penalties for fighting on land or in water.",
@@ -14,6 +19,11 @@ let traits = {
         name: "Brutal",
         effect: "Inflict 2 Casualties on successful Power checks.",
         cost: 200
+    },
+    burrower: {
+        name: "Burrower",
+        effect: "While you are not Engaged, you cannot be attacked, and non-burrowers cannot Engage you.",
+        cost: 150
     },
     courageous: {
         name: "Courageous",

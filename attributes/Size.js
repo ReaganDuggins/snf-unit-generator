@@ -21,6 +21,35 @@ class Size {
         }
     }
 
+    sizeDice = {
+        squad: "1d4",
+        regiment: '1d6',
+        battalion: '1d8',
+        legion: '1d10',
+        hoard: '1d12'
+    }
+
+    toString = () => {
+        console.log(this.sizeDice, this.name.size);
+        let traitStrings = this.traits.map((current) => {
+            return "\n--------------------\n" +
+            current.name.toUpperCase() + ":" +
+            "\n--------------------\n" +
+            current.effect;
+        });
+
+        let asString =  "\n__________________________________________________________________\n" +
+                        `${this.name.size} of ${this.name.race} ${this.name.experience} ${this.name.equipment} ${this.name.unit}` +
+                        "\n" +
+                        `\nAttack: ${this.attack}        Defense:   ${this.defense}` +
+                        `\nPower:  ${this.power}        Toughness: ${this.toughness}` +
+                        `\nMorale: ${this.morale}` +
+                        `\nSize: ${this.sizeDice[this.name.size.toLowerCase()]}` +
+                        "\n\n" + traitStrings.join('\n\n') +
+                        "\n__________________________________________________________________";
+        return asString;
+    }
+
     squadOf = () => {
         this.size = 4;
         this.sizeCostModifier = 0.66;
