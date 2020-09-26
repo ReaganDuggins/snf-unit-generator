@@ -22,6 +22,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.martial
         ]);
+        unit.name.race.should.equal('Bugbear');
     });
 
     it('should apply Dragonborn bonuses', () => {
@@ -35,6 +36,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.courageous
         ]);
+        unit.name.race.should.equal('Dragonborn');
     });
 
     it('should apply Dwarf bonuses', () => {
@@ -48,6 +50,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.stalwart
         ]);
+        unit.name.race.should.equal('Dwarf');
     });
 
     it('should apply Elf bonuses', () => {
@@ -61,6 +64,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.eternal
         ]);
+        unit.name.race.should.equal('Elf');
     });
 
     it('should apply Elf (winged) bonuses', () => {
@@ -74,6 +78,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.eternal
         ]);
+        unit.name.race.should.equal('Elf (winged)');
     });
 
     it('should apply Ghoul bonuses', () => {
@@ -89,6 +94,7 @@ describe('Races', () => {
             Traits.horrify,
             Traits.ravenous
         ]);
+        unit.name.race.should.equal('Ghoul');
     });
 
     it('should apply Gnoll bonuses', () => {
@@ -102,6 +108,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.frenzy
         ]);
+        unit.name.race.should.equal('Gnoll');
     });
 
     it('should apply Gnome bonuses', () => {
@@ -113,6 +120,7 @@ describe('Races', () => {
         unit.morale.should.equal(1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([]);
+        unit.name.race.should.equal('Gnome');
     });
 
     it('should apply Goblin bonuses', () => {
@@ -124,6 +132,7 @@ describe('Races', () => {
         unit.morale.should.equal(0);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([]);
+        unit.name.race.should.equal('Goblin');
     });
 
     it('should apply Hobgoblin bonuses', () => {
@@ -138,6 +147,7 @@ describe('Races', () => {
             Traits.martial,
             Traits.bredForWar
         ]);
+        unit.name.race.should.equal('Hobgoblin');
     });
 
     it('should apply Human bonuses', () => {
@@ -151,6 +161,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.courageous
         ]);
+        unit.name.race.should.equal('Human');
     });
 
     it('should apply Kobold bonuses', () => {
@@ -162,6 +173,7 @@ describe('Races', () => {
         unit.morale.should.equal(-1);
         unit.cost.should.equal(0);
         unit.traits.should.deep.equal([]);
+        unit.name.race.should.equal('Kobold');
     });
 
     it('should apply Lizardfolk bonuses', () => {
@@ -175,6 +187,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.amphibious
         ]);
+        unit.name.race.should.equal('Lizardfolk');
     });
 
     it('should apply Ogre bonuses', () => {
@@ -188,6 +201,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.brutal
         ]);
+        unit.name.race.should.equal('Ogre');
     });
 
     it('should apply Orc bonuses', () => {
@@ -201,6 +215,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.savage
         ]);
+        unit.name.race.should.equal('Orc');
     });
 
     it('should apply Skeleton bonuses', () => {
@@ -215,6 +230,7 @@ describe('Races', () => {
             Traits.undead,
             Traits.mindless
         ]);
+        unit.name.race.should.equal('Skeleton');
     });
 
     it('should apply Ent bonuses', () => {
@@ -229,6 +245,7 @@ describe('Races', () => {
             Traits.twistingRoots,
             Traits.rockHurler
         ]);
+        unit.name.race.should.equal('Ent');
     });
 
     it('should apply Troll bonuses', () => {
@@ -242,6 +259,7 @@ describe('Races', () => {
         unit.traits.should.deep.equal([
             Traits.regenerate
         ]);
+        unit.name.race.should.equal('Troll');
     });
 
     it('should apply Zombie bonuses', () => {
@@ -256,5 +274,6 @@ describe('Races', () => {
             Traits.undead,
             Traits.mindless
         ]);
+        unit.name.race.should.equal('Zombie');
     });
 })

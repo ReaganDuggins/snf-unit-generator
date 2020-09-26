@@ -17,6 +17,7 @@ class Race extends Size {
         this.toughness += 1;
         this.morale += 1;
         this.addTrait(Traits.courageous);
+        this.name.race= 'Dragonborn';
         return this;
     }
 
@@ -27,6 +28,7 @@ class Race extends Size {
         this.toughness += 1;
         this.morale += 2;
         this.addTrait(Traits.stalwart);
+        this.name.race= 'Dwarf';
         return this;
     }
 
@@ -34,30 +36,35 @@ class Race extends Size {
         this.attack += 2;
         this.morale += 1;
         this.addTrait(Traits.courageous);
+        this.name.race= 'Human';
         return this;
     }
 
     elf = () => {
         this.humanStats();
         this.addTrait(Traits.eternal);
+        this.name.race= 'Elf';
         return this;
     }
 
     gnoll = () => {
         this.humanStats();
         this.addTrait(Traits.frenzy);
+        this.name.race= 'Gnoll';
         return this;
     }
     
     hobgoblin = () => {
         this.humanStats();
         this.addTrait(Traits.martial, Traits.bredForWar);
+        this.name.race= 'Hobgoblin';
         return this;
     }
 
     bugbear = () => {
         this.humanStats();
         this.addTrait(Traits.martial);
+        this.name.race= 'Bugbear';
         return this;
     }
     
@@ -66,6 +73,7 @@ class Race extends Size {
         this.power += -1;
         this.defense += 1;
         this.toughness += -1;
+        this.name.race= 'Goblin';
         return this;
     }
 
@@ -75,6 +83,7 @@ class Race extends Size {
         this.defense += 1;
         this.toughness += -1;
         this.morale += -1;
+        this.name.race= 'Kobold';
         return this;
     }
 
@@ -83,6 +92,7 @@ class Race extends Size {
         this.power += 1;
         this.morale += 1;
         this.addTrait(Traits.eternal);
+        this.name.race= 'Elf (winged)';
         return this;
     }
 
@@ -91,6 +101,7 @@ class Race extends Size {
         this.defense += 2;
         this.toughness += 2;
         this.addTrait(Traits.undead, Traits.horrify, Traits.ravenous);
+        this.name.race= 'Ghoul';
         return this;
     }
 
@@ -100,6 +111,7 @@ class Race extends Size {
         this.defense += 1;
         this.toughness += -1;
         this.morale += 1;
+        this.name.race= 'Gnome';
         return this;
     }
 
@@ -110,6 +122,7 @@ class Race extends Size {
         this.toughness += 1;
         this.morale += 1;
         this.addTrait(Traits.amphibious);
+        this.name.race= 'Lizardfolk';
         return this;
     }
         
@@ -120,6 +133,7 @@ class Race extends Size {
         this.toughness += 1;
         this.morale += 2;
         this.addTrait(Traits.savage);
+        this.name.race= 'Orc';
         return this;
     }
 
@@ -130,6 +144,7 @@ class Race extends Size {
         this.toughness += 1;
         this.morale += 1;
         this.addTrait(Traits.undead, Traits.mindless);
+        this.name.race= 'Skeleton';
         return this;
     }
 
@@ -139,18 +154,21 @@ class Race extends Size {
         this.toughness += 2;
         this.morale += 2;
         this.addTrait(Traits.undead, Traits.mindless);
+        this.name.race= 'Zombie';
         return this;
     }
 
     ent = () => {
         this.giantStats();
         this.addTrait(Traits.twistingRoots, Traits.rockHurler);
+        this.name.race= 'Ent';
         return this;
     }
 
     troll = () => {
         this.giantStats();
         this.addTrait(Traits.regenerate);
+        this.name.race= 'Troll';
         return this;
     }
 
@@ -158,6 +176,7 @@ class Race extends Size {
         this.giantStats();
         this.morale += 1;
         this.addTrait(Traits.brutal);
+        this.name.race= 'Ogre';
         return this;
     }
 

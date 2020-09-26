@@ -17,6 +17,7 @@ describe('Experience', () => {
         unit.defense.should.equal(10);
         unit.toughness.should.equal(10);
         unit.morale.should.equal(0);
+        unit.name.experience.should.equal('Green');
     });
 
     it('should apply Regular experience bonuses', () => {
@@ -24,6 +25,7 @@ describe('Experience', () => {
         unit.attack.should.equal(1);
         unit.toughness.should.equal(11);
         unit.morale.should.equal(1);
+        unit.name.experience.should.equal('Regular');
     });
 
     it('should apply Seasoned experience bonuses', () => {
@@ -31,6 +33,7 @@ describe('Experience', () => {
         unit.attack.should.equal(1);
         unit.toughness.should.equal(11);
         unit.morale.should.equal(2);
+        unit.name.experience.should.equal('Seasoned');
     });
 
     it('should apply Veteran experience bonuses', () => {
@@ -38,6 +41,7 @@ describe('Experience', () => {
         unit.attack.should.equal(1);
         unit.toughness.should.equal(11);
         unit.morale.should.equal(3);
+        unit.name.experience.should.equal('Veteran');
     });
 
     it('should apply Elite experience bonuses', () => {
@@ -45,6 +49,7 @@ describe('Experience', () => {
         unit.attack.should.equal(2);
         unit.toughness.should.equal(12)
         unit.morale.should.equal(4);
+        unit.name.experience.should.equal('Elite');
     });
 
     it('should apply SuperElite experience bonuses', () => {
@@ -52,5 +57,6 @@ describe('Experience', () => {
         unit.attack.should.equal(2);
         unit.toughness.should.equal(12)
         unit.morale.should.equal(5);
+        unit.name.experience.should.equal('Super Elite');
     });
 });

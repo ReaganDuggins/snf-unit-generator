@@ -10,6 +10,7 @@ class Unit extends Equipment {
         this.morale += -1;
         this.unitTypeModifier = 0.75;
         this.addTrait(Traits.levy);
+        this.name.unit = "Levy";
         return this;
     }
 
@@ -18,6 +19,7 @@ class Unit extends Equipment {
         this.toughness += 1;
         this.unitTypeModifier = 1;
         this.addTrait(Traits.infantry);
+        this.name.unit = "Infantry";
         return this;
     }
 
@@ -27,6 +29,7 @@ class Unit extends Equipment {
         this.morale += 2;
         this.unitTypeModifier = 1.5;
         this.addTrait(Traits.cavalry);
+        this.name.unit = "Cavalry";
         return this;
     }
 
@@ -34,6 +37,7 @@ class Unit extends Equipment {
         this.morale += 3;
         this.unitTypeModifier = 2;
         this.addTrait(Traits.flying);
+        this.name.unit = "Flying";
         return this;
     }
 
@@ -42,6 +46,7 @@ class Unit extends Equipment {
         this.morale += 1;
         this.unitTypeModifier = 1.75;
         this.addTrait(Traits.archer);
+        this.name.unit = "Archer";
         return this;
     }
 
@@ -51,6 +56,7 @@ class Unit extends Equipment {
         this.toughness += 1;
         this.unitTypeModifier = 1.5;
         this.addTrait(Traits.siegeEngine);
+        this.name.unit = "Siege Engine";
         return this;
     }
 
