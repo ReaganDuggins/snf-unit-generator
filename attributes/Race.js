@@ -43,10 +43,17 @@ class Race extends Size {
     }
 
     human = () => {
-        this.attack += 2;
-        this.morale += 1;
+        this.humanStats();
         this.addTrait(Traits.courageous);
         this.name.race= 'Human';
+        return this;
+    }
+
+    warforged = () => {
+        this.humanStats();
+        this.defense += 1;
+        this.toughness += 1;
+        this.name.race = "Warforged";
         return this;
     }
 

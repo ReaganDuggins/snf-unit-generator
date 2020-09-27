@@ -278,11 +278,9 @@ describe('Races', () => {
     });
 
     it('should apply Ankheg bonuses', () => {
-        console.log(unit);
         unit = unit.ankheg();
-        console.log(unit);
-        unit.attack.should.equal(+1);
-        unit.power.should.equal(+1);
+        unit.attack.should.equal(1);
+        unit.power.should.equal(1);
         unit.defense.should.equal(10);
         unit.toughness.should.equal(11);
         unit.morale.should.equal(0);
@@ -292,5 +290,18 @@ describe('Races', () => {
             Traits.acidSpit
         ]);
         unit.name.race.should.equal('Ankheg');
+    });
+
+    it('should apply Warforged bonuses', () => {
+        unit = unit.warforged();
+        unit.attack.should.equal(2);
+        unit.power.should.equal(0);
+        unit.defense.should.equal(11);
+        unit.toughness.should.equal(11);
+        unit.morale.should.equal(1);
+        unit.cost.should.equal(0);
+        unit.traits.should.deep.equal([
+        ]);
+        unit.name.race.should.equal('Warforged');
     });
 })

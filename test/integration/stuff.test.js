@@ -5,7 +5,7 @@ const Unit = require('../../attributes/Unit');
 
 describe('Integration Testing', () => {
     
-    it('should be able to stack attributes', () => {
+    xit('should be able to stack attributes', () => {
         let unit = new Unit().legionOf().elf().superElite().light().cavalry().countCost();
         console.log("\n\n\n");
         console.log(unit.toString());
