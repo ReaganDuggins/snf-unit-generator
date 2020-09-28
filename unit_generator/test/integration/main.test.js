@@ -1,6 +1,6 @@
 let chai = require('chai');
 chai.should();
-const Unit = require('../../attributes/Unit');
+const Unit = require('../../units/Unit');
 const Main = require('../../main');
 
 describe('Main', () => {

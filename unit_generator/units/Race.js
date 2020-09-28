@@ -1,4 +1,4 @@
-let Traits = require('../Traits');
+let Traits = require('./Traits');
 const Size = require('./Size');
 
 class Race extends Size {

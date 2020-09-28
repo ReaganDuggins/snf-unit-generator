@@ -1,7 +1,7 @@
 let chai = require('chai');
 chai.should();
 
-const Unit = require('../../attributes/Unit');
+const Unit = require('../../units/Unit');
 
 describe('Integration Testing', () => {
     

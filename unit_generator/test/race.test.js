@@ -1,6 +1,6 @@
 let chai = require('chai');
-const Race = require('../attributes/Race');
-const Traits = require('../Traits');
+const Race = require('../units/Race');
+const Traits = require('../units/Traits');
 chai.should();
 
 

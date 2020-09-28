@@ -1,5 +1,5 @@
 const Equipment = require("./Equipment");
-const Traits = require('../Traits');
+const Traits = require('./Traits');
 
 class Unit extends Equipment {
     constructor() {

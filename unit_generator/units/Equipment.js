@@ -1,4 +1,4 @@
-const Experience = require("../attributes/Experience");
+const Experience = require("../units/Experience");
 
 class Equipment extends Experience {
     constructor() {

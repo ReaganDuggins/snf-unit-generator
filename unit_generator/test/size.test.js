@@ -1,7 +1,7 @@
 let chai = require('chai');
 chai.should();
-const Size = require('../attributes/Size');
-const Traits = require('../Traits');
+const Size = require('../units/Size');
+const Traits = require('../units/Traits');
 
 describe('Unit Size', () => {
     let unit;

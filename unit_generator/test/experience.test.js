@@ -1,7 +1,7 @@
 let chai = require('chai');
 chai.should();
 
-let Experience = require('../attributes/Experience');
+let Experience = require('../units/Experience');
 
 describe('Experience', () => {
     let unit;
