@@ -10,7 +10,11 @@ class Main {
         let unit = new Unit();
 
         specs.forEach((spec) => {
-            unit[spec]();
+            try{
+                unit[spec]();
+            } catch(err) {
+                console.log('empty or invalid unit spec: ', spec, unit[spec]);
+            }
         });
         
         return unit;
@@ -19,37 +23,37 @@ class Main {
 
 let main = new Main();
 
-let units = [
-    "hoardOf goblin green light levy",
-    "regimentOf ogre regular heavy infantry",
-    "regimentOf orc veteran medium archer",
-    "-------------------",
-    "squadOf hobgoblin elite medium siegeEngine",
-    "regimentOf elf elite light flying",
-    "squadOf human elite medium infantry",
-    "battalionOf ankheg green light levy",
-    "-------------------",
-    "squadOf warforged veteran heavy flying",
-    "regimentOf warforged veteran superHeavy infantry"
-]
+// let units = [
+//     "hoardOf goblin green light levy",
+//     "regimentOf ogre regular heavy infantry",
+//     "regimentOf orc veteran medium archer",
+//     "-------------------",
+//     "squadOf hobgoblin elite medium siegeEngine",
+//     "regimentOf elf elite light flying",
+//     "squadOf human elite medium infantry",
+//     "battalionOf ankheg green light levy",
+//     "-------------------",
+//     "squadOf warforged veteran heavy flying",
+//     "regimentOf warforged veteran superHeavy infantry"
+// ]
 
-let defenders = [
-    'battalionOf elf veteran heavy infantry',
-    'regimentOf human veteran medium archer',
-    'squadOf dwarf regular heavy siegeEngine',
-    'battalionOf human light green levy',
-    'squadOf elf elite medium flying',
-    'squadOf gnome light green archer'
-]
+// let defenders = [
+//     'battalionOf elf veteran heavy infantry',
+//     'regimentOf human veteran medium archer',
+//     'squadOf dwarf regular heavy siegeEngine',
+//     'battalionOf human light green levy',
+//     'squadOf elf elite medium flying',
+//     'squadOf gnome light green archer'
+// ]
 
-defenders.forEach((unitName) => {
-    if(unitName === "-------------------") {
-        console.log("\n\n");
-        return;
-    }
-    let unit = main.makeUnit(unitName);
-    console.log(unit.toString());
-})
+// defenders.forEach((unitName) => {
+//     if(unitName === "-------------------") {
+//         console.log("\n\n");
+//         return;
+//     }
+//     let unit = main.makeUnit(unitName);
+//     console.log(unit.toString());
+// })
 
 // console.log(main.makeUnit(units[0]).toString())
 

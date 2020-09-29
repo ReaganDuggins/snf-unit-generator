@@ -62,12 +62,17 @@ export default class GenerateForm extends Component {
 
     constructor(props) {
         super(props, null);
+        let startSize = (unitInfo.size[0].display || unitInfo.size[0]).toLowerCase();
+        let startRace = unitInfo.race[0].display || unitInfo.race[0];
+        let startExperience = unitInfo.experience[0].display || unitInfo.experience[0];
+        let startEquipment = unitInfo.equipment[0].display || unitInfo.equipment[0];
+        let startUnitType = unitInfo.unitType[0].display || unitInfo.unitType[0];
         this.state = {
-            size: "",
-            race: "",
-            experience: "",
-            equipment: "",
-            unitType: "",
+            size: startSize,
+            race: startRace,
+            experience: startExperience,
+            equipment: startEquipment,
+            unitType: startUnitType,
             currentUnit: [],
             main: new Main()
         }
@@ -79,7 +84,6 @@ export default class GenerateForm extends Component {
     }
 
     generateUnit = () => {
-        console.log("DLKJFSLDKJFLKSDJFLKSDJFLKSDJF");
         let unitToMake = [
             this.state.size,
             this.state.race,
@@ -87,12 +91,11 @@ export default class GenerateForm extends Component {
             this.state.equipment,
             this.state.unitType,
         ];
-        console.log("*****", unitToMake);
 
-        unitToMake = unitToMake.map((attribute) => {
+        unitToMake = unitToMake.map((attribute, index) => {
             let split = attribute.split(' ');
+            
             if(split.length > 1) {
-                
                 return split[0].toLowerCase() + this.capsFirstLetter(split[1]);
             }
             return attribute.toLowerCase();
@@ -101,7 +104,6 @@ export default class GenerateForm extends Component {
         unitToMake[0] += "Of";
         let makeMe = unitToMake.join(' ');
 
-        console.log(makeMe);
         let newUnit = this.state.main.makeUnit(makeMe).toString();
 
         newUnit = newUnit.split('\n');
@@ -109,7 +111,6 @@ export default class GenerateForm extends Component {
         this.setState({
             currentUnit: newUnit
         });
-        console.log(newUnit);
     }
     
     options = (optionList) => {
@@ -164,12 +165,11 @@ export default class GenerateForm extends Component {
     }
 
     showUnit = () => {
-        console.log(this.state.currentUnit);
         if(this.state.currentUnit.length < 1) {
             return <p></p>
         }
-        return this.state.currentUnit.map((line) => {
-            return <span>{line}<br></br></span>;
+        return this.state.currentUnit.map((line, index) => {
+            return <span key={line + index}>{line}<br></br></span>;
         });
     }
 
@@ -220,10 +220,9 @@ export default class GenerateForm extends Component {
 
               <section>
                   <h2>Your Unit</h2>
-                  <p id="new-unit-holder">
+                  <section className="new-unit-holder">
                     {this.showUnit()}
-                  </p>
-                  
+                  </section>
               </section>
         
               <p>For full rules on military units, followers, strongholds and more, see </p>
