@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
 }
 
 .App-logo {
@@ -28,11 +31,8 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-unit-holder {
+  padding: 3%;
+  border-radius: 5px;
+  background-color: lightgrey;
 }

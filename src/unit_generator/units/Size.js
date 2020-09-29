@@ -32,21 +32,21 @@ class Size {
     toString = () => {
         let traitStrings = this.traits.map((current) => {
             if(!current) {return ""}
-            return "\n--------------------[br]\n" +
-            current.name.toUpperCase() + ":[br]" +
-            "\n--------------------[br]\n" +
+            return "\n--------------------\n" +
+            current.name.toUpperCase() + ":" +
+            "\n--------------------\n" +
             current.effect;
         });
 
-        let asString =  "[quote]\n__________________________________________________________________[br]\n" +
+        let asString =  "\n__________________________________________________________________\n" +
                         `${this.name.size} of ${this.name.race} ${this.name.experience} ${this.name.equipment} ${this.name.unit}` +
                         "\n" +
-                        `\nAttack: ${this.attack}        Defense:   ${this.defense}[br]` +
-                        `\nPower:  ${this.power}        Toughness: ${this.toughness}[br]` +
-                        `\nMorale: ${this.morale}[br]` +
-                        `\nSize: ${this.sizeDice[this.name.size.toLowerCase()]}[br]` +
+                        `\nAttack: ${this.attack}        Defense:   ${this.defense}` +
+                        `\nPower:  ${this.power}        Toughness: ${this.toughness}` +
+                        `\nMorale: ${this.morale}` +
+                        `\nSize: ${this.sizeDice[this.name.size.toLowerCase()]}` +
                         "\n\n" + traitStrings.join('\n\n') +
-                        "[br]\n__________________________________________________________________[br][/quote]";
+                        "\n__________________________________________________________________";
         return asString;
     }
 
