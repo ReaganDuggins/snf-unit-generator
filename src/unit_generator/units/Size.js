@@ -33,7 +33,7 @@ class Size {
         let traitStrings = this.traits.map((current) => {
             if(!current) {return ""}
             return "\n--------------------\n" +
-            current.name.toUpperCase() + ":" +
+            current.name.toUpperCase() + " |" +
             "\n--------------------\n" +
             current.effect;
         });

@@ -169,7 +169,41 @@ export default class GenerateForm extends Component {
             return <p></p>
         }
         return this.state.currentUnit.map((line, index) => {
-            return <span key={line + index}>{line}<br></br></span>;
+            if(line.includes('_________')) {
+                // return <hr key={'hr' + index}></hr>;
+                return '';
+            }
+
+            if(line.includes('----')) {
+                return <span></span>;
+            }
+
+            if(line.includes('|')) {
+                let header = line.split('|')[0];
+                header = header.split(' ').map((word) => {
+                    if(word && word.length > 1){
+                        return this.capsFirstLetter(word.toLowerCase());
+                    }
+                    return '';
+                }).join(' ');
+                return (
+                    <section className='trait-header'>
+                        <hr></hr>
+                        <h3>
+                            {header}
+                        </h3>
+                        <hr></hr>
+                    </section>
+                )
+
+            }
+
+            return <span key={line + index}>
+                {
+                    line
+                }
+                <br></br>
+            </span>;
         });
     }
 
