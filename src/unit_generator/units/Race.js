@@ -104,6 +104,17 @@ class Race extends Size {
         return this;
     }
 
+    grippli = () => {
+        this.attack += -1;
+        this.power += -1;
+        this.defense += 1;
+        this.toughness += -1;
+        this.morale += +1;
+        this.name.race= 'Grippli';
+        this.addTrait(traits.amphibious);
+        return this;
+    }
+
     elfWinged = () => {
         this.attack += 1;
         this.power += 1;
@@ -152,6 +163,15 @@ class Race extends Size {
         this.addTrait(Traits.savage);
         this.name.race= 'Orc';
         return this;
+    }
+
+    owlbear = () => {
+        this.attack += 1;
+        this.power += 2;
+        this.toughness += 2;
+        this.morale += 1;
+        this.name.race = "Owlbear";
+        this.addTrait(Traits.brutal);
     }
 
     skeleton = () => {

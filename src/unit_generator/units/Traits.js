@@ -101,6 +101,11 @@ let traits = {
         effect: "When you suffer casualties, make a DC 15 Morale check. On failure, suffer 1 additional casualty.",
         cost: 0
     },
+    levy: {
+        name: 'Levy Formation',
+        effect: 'Can always be attacked by any other unit type and always Diminished.',
+        cost: 0
+    },
     infantry: {
         name: "Infantry Formation",
         effect: "Cannot be attacked while allied Levies are on the field.",

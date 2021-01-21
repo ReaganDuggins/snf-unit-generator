@@ -55,6 +55,9 @@ let main = new Main();
 //     console.log(unit.toString());
 // })
 
+console.log(main.makeUnit('regimentOf grippli light archer').toString())
+console.log(main.makeUnit('regimentOf human levy').toString())
+
 // console.log(main.makeUnit(units[0]).toString())
 
 module.exports = Main;

@@ -10,6 +10,7 @@ class Unit extends Equipment {
         this.morale += -1;
         this.unitTypeModifier = 0.75;
         this.addTrait(Traits.levy);
+        this.addTrait(Traits.diminished);
         this.name.unit = "Levy";
         return this;
     }
@@ -61,16 +62,16 @@ class Unit extends Equipment {
         return this;
     }
 
-    countCost = () => {
-        let bonuses = this.attack + this.power + this.defense - 10 + this.toughness - 10 + (this.morale * 2);
-        let withMultiplier = bonuses * this.unitTypeModifier * this.sizeCostModifier * 10;
-        let traitCosts = this.traits.reduce((sum, current) => {
-            return sum.cost + current.cost;
-        });
-        let total = withMultiplier + traitCosts + 30;
-        this.cost = total;
-        return this;
-    }
+    // countCost = () => {
+    //     let bonuses = this.attack + this.power + this.defense - 10 + this.toughness - 10 + (this.morale * 2);
+    //     let withMultiplier = bonuses * this.unitTypeModifier * this.sizeCostModifier * 10;
+    //     let traitCosts = this.traits.reduce((sum, current) => {
+    //         return sum.cost + current.cost;
+    //     });
+    //     let total = withMultiplier + traitCosts + 30;
+    //     this.cost = total;
+    //     return this;
+    // }
 }
 
 module.exports = Unit;
