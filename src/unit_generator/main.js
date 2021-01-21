@@ -55,8 +55,18 @@ let main = new Main();
 //     console.log(unit.toString());
 // })
 
-console.log(main.makeUnit('regimentOf grippli light archer').toString())
+// console.log(main.makeUnit('regimentOf grippli light archer').toString())
 
 // console.log(main.makeUnit(units[0]).toString())
+let raisingPrestige = [
+    'hoardOf hobgoblin levy',
+    'regimentOf human veteran light cavalry',
+    'battalionOf bugbear elite superHeavy infantry',
+    'hoardOf dwarf elite heavy siegeEngine'
+];
+
+console.log(raisingPrestige.map((unit) => {
+    return main.makeUnit(unit).toString();
+}).join('\n\n\n'));
 
 module.exports = Main;

@@ -1,4 +1,4 @@
-const Race = require("./Race");
+let nameGen = require('./NameGenerator');
 
 class Size {
     constructor() {
@@ -50,10 +50,21 @@ class Size {
         });
         this.countCost();
 
+        if(this.cost < 300) {
+            this.title = nameGen.commonName();
+        } else if(this.cost < 500) {
+            this.title = nameGen.respectedName();
+        } else if(this.cost < 1000) {
+            this.title = nameGen.prestigiousName();
+        } else if(this.cost >= 1000) {
+            this.title = nameGen.legendaryName();
+        }
+        
+
         let asString =  "\n##################################################################\n" +
-                        `# ${this.title || 'The Warriors'}` +
+                        `# ${this.title || `Some Random ${this.name.race} ${this.name.unit}s`}` +
                         "\n##################################################################\n" +
-                        `${this.name.size} of ${this.name.race}${this.name.unit !== "Levy" ? (this.name.experience + " " + this.name.equipment) : ""} ${this.name.unit}                    Cost: ${Math.round(this.cost)}gp` +
+                        `${this.name.size} of ${this.name.race} ${this.name.unit !== "Levy" ? (this.name.experience + " " + this.name.equipment + " ") : ""}${this.name.unit}                    Cost: ${Math.round(this.cost)}gp` +
                         "\n" +
                         `\nAttack: ${this.attack}        Defense:   ${this.defense}` +
                         `\nPower:  ${this.power}        Toughness: ${this.toughness}` +
