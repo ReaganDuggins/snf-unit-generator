@@ -13,7 +13,7 @@ class Main {
             try{
                 unit[spec]();
             } catch(err) {
-                console.log('empty or invalid unit spec: ', spec, unit[spec]);
+                console.error('empty or invalid unit spec: ', spec, unit[spec], '\nFull Error: ', err);
             }
         });
         
@@ -56,7 +56,6 @@ let main = new Main();
 // })
 
 console.log(main.makeUnit('regimentOf grippli light archer').toString())
-console.log(main.makeUnit('regimentOf human levy').toString())
 
 // console.log(main.makeUnit(units[0]).toString())
 

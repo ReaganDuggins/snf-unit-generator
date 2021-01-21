@@ -34,9 +34,8 @@ class Size {
     countCost = () => {
         let bonuses = this.attack + this.power + (this.defense - 10) + (this.toughness - 10) + (this.morale * 2);
         let withMultiplier = bonuses * this.unitTypeModifier * this.sizeCostModifier * 10;
-        let traitList = this.traits.slice();
-        let traitCosts = traitList.slice().reduce((sum, current) => {
-            return sum.cost + current.cost;
+        let traitCosts = this.traits.reduce((sum, current) => {
+            return (sum.cost || sum) + current.cost;
         });
         let total = withMultiplier + traitCosts + 30;
         this.cost = total;
@@ -44,17 +43,17 @@ class Size {
 
     toString = () => {
         let traitStrings = this.traits.slice().map((current) => {
-            return "\n--------------------\n" +
-            current.name.toUpperCase() + " |" +
-            "\n--------------------\n" +
-            current.effect;
+            return "--------------------\n" +
+                    current.name.toUpperCase() + " |" +
+                    "\n--------------------\n" +
+                    current.effect;
         });
         this.countCost();
 
         let asString =  "\n##################################################################\n" +
                         `# ${this.title || 'The Warriors'}` +
                         "\n##################################################################\n" +
-                        `${this.name.size} of ${this.name.race}${this.name.unit !== "Levy" ? (this.name.experience + " " + this.name.equipment) : ""} ${this.name.unit}                    Cost: ${this.cost}` +
+                        `${this.name.size} of ${this.name.race}${this.name.unit !== "Levy" ? (this.name.experience + " " + this.name.equipment) : ""} ${this.name.unit}                    Cost: ${Math.round(this.cost)}gp` +
                         "\n" +
                         `\nAttack: ${this.attack}        Defense:   ${this.defense}` +
                         `\nPower:  ${this.power}        Toughness: ${this.toughness}` +

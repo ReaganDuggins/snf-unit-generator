@@ -111,7 +111,7 @@ class Race extends Size {
         this.toughness += -1;
         this.morale += +1;
         this.name.race= 'Grippli';
-        this.addTrait(traits.amphibious);
+        this.addTrait(Traits.amphibious);
         return this;
     }
 
